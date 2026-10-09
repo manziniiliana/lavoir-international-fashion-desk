@@ -5,6 +5,13 @@
 <meta name="description" content="L’AVOIR International Fashion Desk — Fashion Week, maisons, cultura e industria.">
 <title>L’AVOIR — International Fashion Desk</title>
 <style>
+/* L'AVOIR masthead: centered, elegant and high-contrast */
+header .top{position:relative;display:flex;justify-content:center;align-items:center;min-height:104px}
+header .top>.brand{position:absolute;left:50%;top:0;transform:translateX(-50%);font-family:"Bodoni MT","Didot","Bodoni 72",Georgia,"Times New Roman",serif;font-size:clamp(38px,5.4vw,66px);font-weight:400;letter-spacing:.16em;line-height:1.05;color:#fff;white-space:nowrap}
+header .top>div:last-child{margin-left:auto;align-self:flex-start}
+header .tag{padding-top:74px;text-align:center;color:#f2e6d5}
+header .lang-switch{margin-top:9px}
+@media(max-width:800px){header .top{min-height:126px;gap:10px}header .top>.brand{top:0;font-size:clamp(34px,9vw,48px);letter-spacing:.12em}header .top>div:last-child{align-self:flex-end;margin-top:0}.tag{padding-top:68px!important;font-size:9px!important}}
 :root{--wine:#5a1020;--ink:#f2e6d5;--navy:#15153c;--paper:#5a1020;--muted:#8a625f}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--ink);color:var(--paper);font-family:Arial,Helvetica,sans-serif}a{color:var(--paper)}
 header{border-bottom:1px solid rgba(90,16,32,.22);padding:25px 5vw;position:sticky;top:0;background:rgba(15,0,2,.96);backdrop-filter:blur(8px);z-index:10}.top{display:flex;justify-content:space-between;align-items:center;gap:30px}.brand{font-size:13px;letter-spacing:7px}.tag{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}.lang-switch{display:flex;align-items:center;justify-content:flex-end;gap:7px;margin-top:9px;font-size:10px;letter-spacing:1.5px}.lang-switch a{color:var(--ink);text-decoration:none}.lang-switch a[aria-current="page"]{text-decoration:underline}.site-icons{display:flex;justify-content:flex-end;gap:13px;margin-top:10px}.site-icons a{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border:1px solid rgba(242,230,213,.35);border-radius:50%;color:var(--ink);text-decoration:none;font-size:11px;font-weight:700;letter-spacing:0}.site-icons a:hover{border-color:var(--ink);transform:translateY(-1px)}
