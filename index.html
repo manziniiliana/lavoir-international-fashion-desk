@@ -116,12 +116,76 @@ footer{border-top:1px solid var(--rule);color:var(--muted);padding:32px 5vw;font
  #houses .grid{grid-template-columns:1fr}
  footer{flex-direction:column;gap:10px}
 }
+
+/* L'AVOIR editorial homepage refresh — inspired by magazine hierarchy, not copied */
+header{padding:16px 5vw 13px}
+header .top{min-height:82px}
+header .top>.brand{font-size:clamp(36px,4.5vw,54px);letter-spacing:.17em}
+header .tag{padding-top:58px;font-size:9px;letter-spacing:2.1px}
+nav{gap:18px 24px;margin-top:13px;padding-top:12px;border-top:1px solid rgba(242,230,213,.16)}
+nav a{font-size:9px;letter-spacing:1.45px}
+.hero{min-height:auto;padding:46px 0 35px;justify-content:flex-start}
+.hero .kicker{margin-bottom:14px}
+.hero h1{font-size:clamp(34px,5.5vw,76px);line-height:.98;letter-spacing:-2px;max-width:900px}
+.hero .intro{font-size:clamp(16px,1.8vw,21px);max-width:680px;margin-top:18px;line-height:1.45}
+.featured{padding:25px 0 58px;border-bottom:1px solid rgba(90,16,32,.22)}
+.featured-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:22px;border-bottom:1px solid rgba(90,16,32,.35);padding-bottom:12px}
+.featured-head h2{font:400 25px Georgia,serif}
+.featured-head span{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}
+.featured-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px}
+.feature-card{min-width:0;padding:0 0 20px;border-bottom:1px solid rgba(90,16,32,.22);display:flex;flex-direction:column;align-items:flex-start}
+.feature-card:first-child{border-right:1px solid rgba(90,16,32,.22);padding-right:18px}
+.feature-label{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.feature-card h3{font:400 clamp(22px,2.6vw,35px)/1.08 Georgia,serif;margin-bottom:12px}
+.feature-card:not(:first-child) h3{font-size:clamp(19px,2vw,27px)}
+.feature-card p{font-size:13px;line-height:1.65;color:#6f4b4a}
+.feature-card a{margin-top:auto;padding-top:18px;font-size:9px;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--paper);padding-bottom:5px}
+section{padding:58px 0}
+.section-head{margin-bottom:25px;padding-bottom:13px;border-bottom:1px solid rgba(90,16,32,.3)}
+.section-head h2{font-size:32px}
+.article{grid-template-columns:19% 1fr;gap:28px;padding:24px 0;border-top:1px solid rgba(90,16,32,.17)}
+.article h3{font-size:clamp(23px,2.5vw,30px);line-height:1.13}
+.article p{font-size:14px;line-height:1.7}
+.meta{line-height:1.6}
+.grid{gap:1px}
+.card{padding:24px;min-height:175px}
+footer{border-top:1px solid rgba(90,16,32,.18)}
+@media(max-width:800px){
+ header{padding:15px 5vw}
+ header .top{min-height:110px}
+ header .top>.brand{font-size:clamp(34px,8vw,46px)}
+ header .tag{padding-top:61px!important}
+ nav{gap:14px 17px}
+ .hero{padding:35px 0 28px}
+ .featured-grid{grid-template-columns:1fr 1fr}
+ .feature-card:first-child{grid-column:1/-1;border-right:0;border-bottom:1px solid rgba(90,16,32,.22);padding-right:0}
+ .feature-card:first-child h3{font-size:32px}
+ .article{grid-template-columns:1fr;gap:9px}
+}
+@media(max-width:500px){
+ .featured-grid{grid-template-columns:1fr}
+ .feature-card:first-child{grid-column:auto}
+ .feature-card h3,.feature-card:not(:first-child) h3{font-size:25px}
+ .featured-head{display:block}
+ .featured-head span{display:block;margin-top:7px}
+ .section-head h2{font-size:29px}
+ nav{gap:12px 14px}
+}
+
 </style>
 </head>
 <body>
 <header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html" aria-current="page">EN</a><span>/</span><a href="index-es.html">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a></div></div></div><nav><a href="#fashion-news">Fashion News</a><a href="#fashion-week">Fashion Week</a><a href="#houses">Houses</a><a href="#interviews">Interviews</a><a href="#culture">Culture</a><a href="#industry">Industry</a><a href="#press">Press Room</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#policies">Policies</a></nav></header>
 <main>
 <section class="hero"><div class="kicker">L’AVOIR · INDEPENDENT EDITORIAL PUBLICATION</div><h1>INTERNATIONAL<br>FASHION DESK</h1><p class="intro">Fashion, culture and the luxury industry. An independent editorial perspective from Argentina to the world.</p></section>
+
+<section class="featured" aria-label="Featured stories">
+<div class="featured-head"><h2>Featured Stories</h2><span>The L’AVOIR editorial perspective</span></div>
+<div class="featured-grid">
+<article class="feature-card"><div class="feature-label">Luxury · Sustainability</div><h3>Kering brings its Generation Award to India to advance circular innovation</h3><p>Three startups present solutions connecting waste, new materials and the future of the luxury industry.</p><a href="https://lavoirarg.substack.com/p/kering-lleva-su-premio-de-moda-sostenible?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Read the story →</a></article>
+<article class="feature-card"><div class="feature-label">Industry · Materials</div><h3>Fashion looks for new fibres to reduce pressure on forests</h3><p>Agricultural waste opens new possibilities for textile production, although scaling these materials remains a challenge.</p><a href="https://lavoirarg.substack.com/p/la-moda-busca-nuevas-fibras-el-desafio?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Read the story →</a></article>
+<article class="feature-card"><div class="feature-label">Fashion Houses · Creative Direction</div><h3>Anthony Vaccarello and a decade at Saint Laurent</h3><p>A look at creative direction and the identity of one of fashion’s most influential maisons.</p><a href="https://lavoirarg.substack.com/p/anthony-vaccarello-deja-saint-laurent?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Read the story →</a></article>
+</div></section>
 <section id="fashion-news"><div class="section-head"><h2>Fashion News</h2><span>News from the World of Fashion</span></div>
 <article class="article"><div class="meta">Luxury &amp; Sustainability<br>14 October 2026</div><div><h3>Kering brings its Generation Award to India to advance circular innovation</h3><p>In partnership with Reliance Brands Limited, the luxury group recognised three startups working with textile waste, recycling and alternative footwear materials. The initiative aims to connect emerging innovation with the global luxury industry and accelerate solutions for a more circular fashion system.</p><a class="read" href="https://lavoirarg.substack.com/p/kering-lleva-su-premio-de-moda-sostenible?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Read the full story →</a></div></article>
 <article class="article"><div class="meta">Fashion Industry<br>14 October 2026</div><div><h3>Fashion looks for new fibres: the challenge of producing without putting pressure on forests</h3><p>The fashion industry is exploring alternative raw materials, including agricultural residues such as wheat straw, to reduce its reliance on wood-based fibres. Pilot projects show promise, but scaling these innovations requires investment, infrastructure and a reliable supply chain.</p><a class="read" href="https://lavoirarg.substack.com/p/la-moda-busca-nuevas-fibras-el-desafio?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Read the full story →</a></div></article>
