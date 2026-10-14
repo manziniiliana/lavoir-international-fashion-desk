@@ -52,12 +52,76 @@ nav{display:flex;flex-wrap:wrap;gap:22px;margin-top:20px}nav a{text-decoration:n
 main{max-width:1320px;margin:auto;padding:0 5vw}.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;padding:90px 0 80px;border-bottom:1px solid rgba(90,16,32,.22)}.kicker{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:25px}h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(52px,9vw,132px);line-height:.86;letter-spacing:-4px;max-width:1050px}.intro{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,2vw,26px);line-height:1.35;max-width:720px;margin-top:45px;color:#5a1020}
 section{padding:85px 0;border-bottom:1px solid rgba(90,16,32,.22)}.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:25px;margin-bottom:45px}.section-head h2{font-family:Georgia,serif;font-size:36px;font-weight:400}.section-head span{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.article{display:grid;grid-template-columns:25% 1fr;gap:45px;padding:28px 0;border-top:1px solid rgba(245,241,235,.16)}.meta{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}.article h3{font-family:Georgia,serif;font-size:30px;font-weight:400;margin-bottom:12px}.article p{color:#6f4b4a;max-width:720px;line-height:1.65}.read{display:inline-block;margin-top:22px;text-decoration:none;font-size:10px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--paper);padding-bottom:6px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(90,16,32,.18);border:1px solid rgba(90,16,32,.22)}.card{background:var(--ink);min-height:190px;padding:28px;display:flex;flex-direction:column;justify-content:space-between}.card h3{font-family:Georgia,serif;font-size:25px;font-weight:400}.card p{font-size:12px;color:var(--muted);line-height:1.5}.press{background:var(--navy);padding:45px}.press h3{font-family:Georgia,serif;font-weight:400;font-size:34px;margin-bottom:18px}.press p{color:#d7d5df;line-height:1.7;max-width:750px}.press a{display:inline-block;margin-top:25px;text-decoration:none;border-bottom:1px solid #f2e6d5;padding-bottom:5px;font-size:10px;letter-spacing:2px;text-transform:uppercase}.press-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}.press-actions a{margin-top:0;border:1px solid rgba(242,230,213,.55);padding:12px 18px}footer{padding:55px 5vw;color:#8a625f;font-size:10px;letter-spacing:1.5px;display:flex;justify-content:space-between;gap:20px}
 @media(max-width:800px){.top{align-items:flex-start;flex-direction:column}.site-icons{justify-content:flex-start}.hero{min-height:65vh}h1{letter-spacing:-2px}.article{grid-template-columns:1fr;gap:12px}.grid{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head span{display:block;margin-top:8px}}@media(max-width:500px){.grid{grid-template-columns:1fr}header{position:relative}}
-.about-faq{margin-top:30px}.about-faq details{border-top:1px solid rgba(90,16,32,.22)}.about-faq details:last-child{border-bottom:1px solid rgba(90,16,32,.22)}.about-faq summary{list-style:none;cursor:pointer;padding:24px 4px;font-family:Georgia,serif;font-size:20px;color:var(--paper);position:relative;padding-right:35px}.about-faq summary::-webkit-details-marker{display:none}.about-faq summary:after{content:'+';position:absolute;right:4px;font-family:Arial,sans-serif;font-size:18px;font-weight:300}.about-faq details[open] summary:after{content:'−'}.faq-answer{padding:0 35px 25px 4px;max-width:850px;font-size:14px;line-height:1.7;color:var(--muted)}</style>
+.about-faq{margin-top:30px}.about-faq details{border-top:1px solid rgba(90,16,32,.22)}.about-faq details:last-child{border-bottom:1px solid rgba(90,16,32,.22)}.about-faq summary{list-style:none;cursor:pointer;padding:24px 4px;font-family:Georgia,serif;font-size:20px;color:var(--paper);position:relative;padding-right:35px}.about-faq summary::-webkit-details-marker{display:none}.about-faq summary:after{content:'+';position:absolute;right:4px;font-family:Arial,sans-serif;font-size:18px;font-weight:300}.about-faq details[open] summary:after{content:'−'}.faq-answer{padding:0 35px 25px 4px;max-width:850px;font-size:14px;line-height:1.7;color:var(--muted)}
+/* L'AVOIR editorial redesign — clean magazine hierarchy */
+:root{--wine:#5a1020;--ink:#f6f1e8;--navy:#15153c;--paper:#211719;--muted:#806e69;--rule:rgba(33,23,25,.18)}
+body{background:var(--ink);color:var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+header{position:relative;padding:22px 5vw 0;background:#100b0d;color:var(--ink);border-bottom:0}
+header .top{min-height:105px;padding-bottom:18px}
+header .top>.brand{font-size:clamp(42px,5.5vw,68px);letter-spacing:.2em}
+header .tag{color:#d7c7bb}
+header nav{justify-content:center;gap:clamp(12px,2.1vw,30px);padding:17px 0 19px;margin-top:0;border-top:1px solid rgba(246,241,232,.18)}
+header nav a{font-size:10px;letter-spacing:1.25px;color:var(--ink);white-space:nowrap}
+header nav a:hover{color:#d9b7a6}
+main{max-width:1440px;padding:0 clamp(20px,5vw,76px)}
+.hero{min-height:0;padding:64px 0 48px;border-bottom:1px solid var(--rule);justify-content:center}
+.hero .kicker{margin-bottom:18px;color:var(--wine);font-weight:700}
+.hero h1{font-size:clamp(42px,7vw,92px);line-height:.94;letter-spacing:-.045em;max-width:1000px;color:var(--wine)}
+.hero .intro{font-size:clamp(18px,2vw,24px);max-width:750px;margin-top:24px;line-height:1.42}
+section{padding:58px 0;border-bottom:1px solid var(--rule)}
+.section-head{margin-bottom:24px;padding-bottom:13px;border-bottom:1px solid var(--rule)}
+.section-head h2{font-size:clamp(27px,3vw,38px);letter-spacing:-.025em;color:var(--wine)}
+.section-head span{font-size:9px;letter-spacing:1.5px}
+#fashion-news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:0}
+#fashion-news>.section-head{grid-column:1/-1}
+#fashion-news .article{display:flex;flex-direction:column;gap:14px;padding:23px 22px;margin:0 0 18px;border:1px solid var(--rule);background:rgba(255,255,255,.45);min-width:0}
+#fashion-news .article .meta{font-size:9px;letter-spacing:1.5px;color:var(--wine)}
+#fashion-news .article h3{font-size:clamp(22px,2.4vw,30px);line-height:1.12;letter-spacing:-.02em;margin-bottom:10px}
+#fashion-news .article p{font-size:13px;line-height:1.7;color:#5e5050}
+#fashion-news .article .read{align-self:flex-start;margin-top:auto;padding-top:10px}
+#fashion-news .article:first-of-type{grid-column:1/-1;display:grid;grid-template-columns:minmax(150px,.55fr) 1.45fr;gap:30px;padding:34px;background:var(--navy);border-color:var(--navy);color:var(--ink)}
+#fashion-news .article:first-of-type .meta,#fashion-news .article:first-of-type p{color:#e4d8d0}
+#fashion-news .article:first-of-type h3{font-size:clamp(30px,4vw,48px);max-width:850px}
+#fashion-news .article:first-of-type .read{color:var(--ink);border-color:var(--ink)}
+.article{grid-template-columns:1fr;gap:14px;padding:24px 0;border-top:1px solid var(--rule)}
+.article h3{font-size:clamp(23px,2.4vw,30px);line-height:1.16}
+.article p{font-size:14px;line-height:1.75;color:#5e5050}
+.read{font-weight:700;letter-spacing:1.3px;font-size:9px}
+#fashion-week{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
+#fashion-week>.section-head{grid-column:1/-1}
+#fashion-week .article{padding:22px 0;margin:0;border-top:1px solid var(--rule)}
+#houses .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+#houses .card{min-height:175px;padding:24px;background:#fbf8f2}
+#houses .card h3{font-size:clamp(21px,2vw,27px);color:var(--wine)}
+.press{padding:clamp(25px,4vw,48px);background:var(--navy)}
+.press h3{line-height:1.15}
+footer{border-top:1px solid var(--rule);color:var(--muted);padding:32px 5vw;font-size:9px}
+@media(max-width:800px){
+ header .top{min-height:115px}
+ header .top>.brand{font-size:clamp(34px,8vw,48px)}
+ header nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;gap:18px}
+ #fashion-news{grid-template-columns:1fr}
+ #fashion-news>.section-head{grid-column:auto}
+ #fashion-news .article:first-of-type{grid-column:auto;grid-template-columns:1fr;gap:14px;padding:26px}
+ #fashion-week{grid-template-columns:1fr}
+ #fashion-week>.section-head{grid-column:auto}
+ #houses .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ section{padding:42px 0}
+}
+@media(max-width:480px){
+ main{padding:0 18px}
+ header{padding-left:18px;padding-right:18px}
+ .hero{padding:45px 0 36px}
+ .hero h1{font-size:clamp(39px,11vw,55px);letter-spacing:-.04em}
+ #houses .grid{grid-template-columns:1fr}
+ footer{flex-direction:column;gap:10px}
+}
+</style>
 </head>
 <body>
 <header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><span>/</span><a href="index-es.html" aria-current="page">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a></div></div></div><nav><a href="#fashion-news">Noticias de moda</a><a href="#fashion-week">Semana de la Moda</a><a href="#houses">Casas</a><a href="#interviews">Entrevistas</a><a href="#culture">Cultura</a><a href="#industry">Industria</a><a href="#press">Prensa</a><a href="#portfolio">Portfolio</a><a href="#about">Sobre L’AVOIR</a></nav></header>
 <main>
-<section class="hero"><div class="kicker">L’AVOIR · International Fashion Desk</div><h1>INTERNATIONAL<br>FASHION DESK</h1><p class="intro">Moda internacional, Fashion Week, maisons, cultura e industria. Una unidad editorial de L’AVOIR con mirada propia desde Argentina hacia el mundo.</p></section>
+<section class="hero"><div class="kicker">L’AVOIR · PUBLICACIÓN EDITORIAL INDEPENDIENTE</div><h1>INTERNATIONAL<br>FASHION DESK</h1><p class="intro">Moda, cultura e industria del lujo. Una mirada independiente desde Argentina hacia el mundo.</p></section>
 <section id="fashion-news"><div class="section-head"><h2>Noticias de moda</h2><span>Actualidad del mundo de la moda</span></div>
 <article class="article"><div class="meta">Lujo y sustentabilidad<br>14 de octubre de 2026</div><div><h3>Kering lleva su premio Generation a India e impulsa la innovación circular</h3><p>En alianza con Reliance Brands Limited, el grupo reconoció a tres startups que trabajan con residuos textiles, reciclaje y materiales alternativos para calzado. La iniciativa busca conectar la innovación emergente con la industria global del lujo y acelerar soluciones para una moda más circular.</p><a class="read" href="https://lavoirarg.substack.com/p/kering-lleva-su-premio-de-moda-sostenible?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
 <article class="article"><div class="meta">Industria de la moda<br>14 de octubre de 2026</div><div><h3>La moda busca nuevas fibras: el desafío de producir sin presionar los bosques</h3><p>La industria explora materias primas alternativas, entre ellas residuos agrícolas como la paja de trigo, para reducir su dependencia de fibras derivadas de la madera. Los proyectos piloto muestran potencial, pero ampliar estas innovaciones exige inversión, infraestructura y una cadena de suministro estable.</p><a class="read" href="https://lavoirarg.substack.com/p/la-moda-busca-nuevas-fibras-el-desafio?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
@@ -78,7 +142,7 @@ section{padding:85px 0;border-bottom:1px solid rgba(90,16,32,.22)}.section-head{
 <article class="article"><div class="meta">Elie Saab<br>Ready-to-Wear SS27</div><div><h3>El viejo Hollywood se encuentra con el verano</h3><p>Glamour, boudoir, movimiento, bordados artesanales y texturas livianas como gasas y sedas.</p><a class="read" href="https://lavoirarg.substack.com/p/elie-saab?r=8o6915" target="_blank" rel="noopener">Leer artículo →</a></div></article>
 <article class="article"><div class="meta">Comme des Garçons<br>Ready-to-Wear SS27</div><div><h3>La colección lleva la moda hacia el territorio del disfraz</h3><p>Una propuesta teatral y experimental donde el volumen y la construcción visual dominan la percepción del cuerpo.</p><a class="read" href="https://lavoirarg.substack.com/p/comme-des-garcons-lleva-la-coleccion?r=8o6915" target="_blank" rel="noopener">Leer artículo →</a></div></article>
 <article class="article"><div class="meta">Ann Demeulemeester<br>Ready-to-Wear SS27</div><div><h3>Cuando el romanticismo oscuro se vuelve aburrido</h3><p>Una lectura crítica de Lonesome Heaven: negro, cuero, sedas y una estética coherente que, desde nuestra mirada, pierde sorpresa.</p><a class="read" href="https://lavoirarg.substack.com/p/ann-demeulemeester-cuando-el-romanticismo?r=8o6915" target="_blank" rel="noopener">Leer artículo →</a></div></article></section>
-<section id="houses"><div class="section-head"><h2>Houses</h2><span>Archivo de Maisons</span></div><div class="grid">
+<section id="houses"><div class="section-head"><h2>Casas</h2><span>Archivo de Maisons</span></div><div class="grid">
 <div class="card"><h3>Gucci</h3><p>Archivo editorial de L’AVOIR.</p><a class="read" href="https://lavoirarg.substack.com/p/entre-gucci-y-dolce-and-gabbana-solo?r=8o6915" target="_blank" rel="noopener">Leer artículo →</a></div>
 <div class="card"><h3>Alexander McQueen</h3><p>Archivo editorial de L’AVOIR.</p><a class="read" href="https://lavoirarg.substack.com/p/decepcion-o-la-linea-del-buen-gusto?r=8o6915" target="_blank" rel="noopener">Leer artículo →</a></div>
 <div class="card"><h3>Balenciaga</h3><p>Cobertura y análisis.</p><a class="read" href="https://lavoirarg.substack.com/p/balenciaga-despues-de-demna-hacia?r=8o6915" target="_blank" rel="noopener">Leer artículo →</a></div>
@@ -90,11 +154,11 @@ section{padding:85px 0;border-bottom:1px solid rgba(90,16,32,.22)}.section-head{
 <section id="interviews"><div class="section-head"><h2>Conversaciones de L’AVOIR</h2><span>Publicado en Substack</span></div><div class="press"><a href="https://lavoirarg.substack.com" target="_blank" rel="noopener">Abrir archivo de entrevistas →</a></div></section>
 <section id="culture"><div class="section-head"><h2>Cultura</h2><span>Moda · Arte · Cine · Fotografía · Diseño</span></div><p class="intro">La moda también es cultura: imágenes, cine, arte, fotografía, diseño y las historias que construyen una época.</p><a class="read" href="culture.html">Abrir Cultura →</a></section>
 <section id="industry"><div class="section-head"><h2>Industria</h2><span>Lujo · Negocios · Sostenibilidad · Innovación</span></div><p class="intro">La industria detrás de la moda: lujo, negocios, sostenibilidad, innovación y transformación del mercado internacional.</p><a class="read" href="industry.html">Abrir Industria →</a></section>
-<section id="portfolio"><div class="section-head"><h2>Portfolio</h2><span>Selección editorial · 2026</span></div><div class="press"><h3>L’AVOIR — Selected Editorial Portfolio</h3><p>Una selección curada del trabajo editorial de L’AVOIR en moda internacional, cultura e industrias creativas. Periodismo independiente desde Argentina, desarrollado con perspectiva internacional y una mirada editorial crítica.</p><div class="press-actions"><a href="portfolio.html" target="_blank" rel="noopener">Abrir portfolio completo →</a><a href="#fashion-week">Archivo de Fashion Week →</a><a href="#houses">Casas seleccionadas →</a></div></div></section>
+<section id="portfolio"><div class="section-head"><h2>Portfolio editorial</h2><span>Selección editorial · 2026</span></div><div class="press"><h3>L’AVOIR — Selected Editorial Portfolio</h3><p>Una selección curada del trabajo editorial de L’AVOIR en moda internacional, cultura e industrias creativas. Periodismo independiente desde Argentina, desarrollado con perspectiva internacional y una mirada editorial crítica.</p><div class="press-actions"><a href="portfolio.html" target="_blank" rel="noopener">Abrir portfolio completo →</a><a href="#fashion-week">Archivo de Fashion Week →</a><a href="#houses">Casas seleccionadas →</a></div></div></section>
 <section id="press"><div class="section-head"><h2>Press Room</h2><span>Medios y prensa</span></div><div class="press"><h3>L’AVOIR International Fashion Desk</h3><p><strong>L’AVOIR</strong><br>Dirección editorial<br><br>Publicación editorial independiente con base en Argentina, dedicada a la moda internacional, la cultura y la industria de la moda.</p><div class="press-actions"><a href="media-kit/LAVOIR-Media-Kit-English.html" target="_blank" rel="noopener">Ver Media Kit →</a><a href="mailto:lavoir.editorial@outlook.com.ar">Contactar a L’AVOIR →</a></div></div></section>
 
 <section id="about">
-<div class="section-head"><h2>About</h2><span>Perfil editorial</span></div>
+<div class="section-head"><h2>Sobre L’AVOIR</h2><span>Perfil editorial</span></div>
 <div class="press">
 <h3>L’AVOIR — International Fashion Desk</h3>
 <div class="about-faq">
