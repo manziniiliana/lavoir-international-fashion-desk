@@ -331,6 +331,27 @@ header .site-icons a.membership-link:active {
 @keyframes leadNewsIn{from{opacity:.35;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
 @media(max-width:760px){#fashion-news .lead-track{min-height:0}#fashion-news .lead-carousel .article,#fashion-news .lead-carousel .article:first-of-type{grid-template-columns:1fr;gap:14px;padding:26px;min-height:0}#fashion-news .lead-carousel .article h3{font-size:clamp(28px,8vw,38px)}}
 
+
+/* Accesibilidad: toda la tipografía dentro de los paneles editoriales azules es blanca */
+#interviews .press,
+#interviews .press *,
+#about .press,
+#about .press *,
+#policies .press,
+#policies .press * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+#interviews .press a,
+#about .press a,
+#policies .press a,
+#interviews .press a:visited,
+#about .press a:visited,
+#policies .press a:visited {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: rgba(255,255,255,.8) !important;
+}
 </style>
 </head>
 <body>
