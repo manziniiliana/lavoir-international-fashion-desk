@@ -313,6 +313,24 @@ header .site-icons a.membership-link:active {
   border-color: #101022 !important;
 }
 
+
+/* Carrusel de noticias destacadas: McQueen y Veronica Leoni */
+#fashion-news .lead-carousel{grid-column:1/-1;min-width:0;position:relative;margin:0 0 22px;overflow:hidden}
+#fashion-news .lead-track{position:relative;min-height:260px}
+#fashion-news .lead-carousel .article,#fashion-news .lead-carousel .article:first-of-type{display:none;grid-column:auto;grid-template-columns:minmax(150px,.55fr) 1.45fr;gap:30px;margin:0;padding:34px;background:var(--navy);border:1px solid var(--navy);color:var(--ink);min-height:260px}
+#fashion-news .lead-carousel .article.is-active{display:grid;animation:leadNewsIn .55s ease both}
+#fashion-news .lead-carousel .article .meta,#fashion-news .lead-carousel .article p{color:#e4d8d0}
+#fashion-news .lead-carousel .article h3{font-size:clamp(30px,4vw,48px);max-width:850px}
+#fashion-news .lead-carousel .article .read{color:var(--ink);border-color:var(--ink)}
+#fashion-news .lead-controls{display:flex;align-items:center;justify-content:center;gap:18px;padding:13px 0 0}
+#fashion-news .lead-controls button{cursor:pointer}
+#fashion-news .lead-prev,#fashion-news .lead-next{border:1px solid var(--navy);background:transparent;color:var(--navy);width:36px;height:32px;font-size:18px;line-height:1}
+#fashion-news .lead-dots{display:flex;align-items:center;gap:8px}
+#fashion-news .lead-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#c6b8b5}
+#fashion-news .lead-dot.is-active{background:var(--wine);transform:scale(1.25)}
+@keyframes leadNewsIn{from{opacity:.35;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:760px){#fashion-news .lead-track{min-height:0}#fashion-news .lead-carousel .article,#fashion-news .lead-carousel .article:first-of-type{grid-template-columns:1fr;gap:14px;padding:26px;min-height:0}#fashion-news .lead-carousel .article h3{font-size:clamp(28px,8vw,38px)}}
+
 </style>
 </head>
 <body>
@@ -328,7 +346,17 @@ header .site-icons a.membership-link:active {
 <article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" alt="Contemporary runway-inspired fashion" loading="lazy"></div><div class="feature-label">Casas · Dirección creativa</div><h3>Anthony Vaccarello y una década al frente de Saint Laurent</h3><p>Una mirada a la dirección creativa y a la identidad de una de las maisons más influyentes.</p><a href="https://lavoirarg.substack.com/p/anthony-vaccarello-deja-saint-laurent?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la historia →</a></article>
 </div></section>
 <section id="fashion-news"><div class="section-head"><h2>Noticias de moda</h2><span>Actualidad del mundo de la moda</span></div>
-<article class="article"><div class="meta">Alexander McQueen<br>15 de octubre de 2026</div><div><h3>Seán McGirr deja Alexander McQueen: Kering prepara una nueva etapa creativa</h3><p>Kering confirmó la salida de Seán McGirr de la dirección creativa de Alexander McQueen. Nombrado en octubre de 2023, el diseñador irlandés sucedió a Sarah Burton y condujo a la maison británica durante una etapa de transición. El grupo anunció que próximamente dará a conocer la nueva dirección creativa de la firma. El cambio vuelve a poner el foco en cómo la marca equilibrará el legado disruptivo de su fundador con su posicionamiento futuro dentro del mercado del lujo.</p><a class="read" href="https://lavoirarg.substack.com/p/alexander-mcqueen-sean-mcgirr-deja?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
+<div class="lead-carousel" aria-label="Noticias destacadas">
+  <div class="lead-track">
+    <article class="article lead-slide is-active" aria-hidden="false"><div class="meta">Alexander McQueen<br>15 de octubre de 2026</div><div><h3>Seán McGirr deja Alexander McQueen: Kering prepara una nueva etapa creativa</h3><p>Kering confirmó la salida de Seán McGirr de la dirección creativa de Alexander McQueen. Nombrado en octubre de 2023, el diseñador irlandés sucedió a Sarah Burton y condujo a la maison británica durante una etapa de transición. El grupo anunció que próximamente dará a conocer la nueva dirección creativa de la firma. El cambio vuelve a poner el foco en cómo la marca equilibrará el legado disruptivo de su fundador con su posicionamiento futuro dentro del mercado del lujo.</p><a class="read" href="https://lavoirarg.substack.com/p/alexander-mcqueen-sean-mcgirr-deja?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
+    <article class="article lead-slide" aria-hidden="true"><div class="meta">Calvin Klein Collection<br>15 de octubre de 2026</div><div><h3>Veronica Leoni deja la dirección creativa tras cuatro temporadas</h3><p>La diseñadora italiana deja la línea de pasarela tras cuatro temporadas. Su salida llega mientras PVH, grupo propietario de la marca, afronta un contexto financiero complejo y busca definir el futuro de Collection.</p><a class="read" href="https://lavoirarg.substack.com/p/veronica-leoni-deja-calvin-klein?r=8o6915&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
+  </div>
+  <div class="lead-controls">
+    <button class="lead-prev" type="button" aria-label="Noticia anterior">←</button>
+    <div class="lead-dots"><button class="lead-dot is-active" type="button" aria-label="Mostrar noticia 1"></button><button class="lead-dot" type="button" aria-label="Mostrar noticia 2"></button></div>
+    <button class="lead-next" type="button" aria-label="Noticia siguiente">→</button>
+  </div>
+</div>
 <article class="article"><div class="meta">Lujo y sustentabilidad<br>14 de octubre de 2026</div><div><h3>Kering lleva su premio Generation a India e impulsa la innovación circular</h3><p>En alianza con Reliance Brands Limited, el grupo reconoció a tres startups que trabajan con residuos textiles, reciclaje y materiales alternativos para calzado. La iniciativa busca conectar la innovación emergente con la industria global del lujo y acelerar soluciones para una moda más circular.</p><a class="read" href="https://lavoirarg.substack.com/p/kering-lleva-su-premio-de-moda-sostenible?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
 <article class="article"><div class="meta">Industria de la moda<br>14 de octubre de 2026</div><div><h3>La moda busca nuevas fibras: el desafío de producir sin presionar los bosques</h3><p>La industria explora materias primas alternativas, entre ellas residuos agrícolas como la paja de trigo, para reducir su dependencia de fibras derivadas de la madera. Los proyectos piloto muestran potencial, pero ampliar estas innovaciones exige inversión, infraestructura y una cadena de suministro estable.</p><a class="read" href="https://lavoirarg.substack.com/p/la-moda-busca-nuevas-fibras-el-desafio?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
 <article class="article"><div class="meta">Moda y televisión<br>Pasarela Federal</div><div><h3>La Pasarela Federal llegó a la televisión</h3><p>Pasarela Federal tuvo una emisión especial por la pantalla de América TV a las 17:00, con la conducción de la modelo argentina Ingrid Grudke. La transmisión llevó la iniciativa a la audiencia televisiva y puso el foco en una propuesta vinculada con la difusión del diseño y el talento nacional.</p><a class="read" href="https://lavoirarg.substack.com/p/la-pasarela-federal-llego-a-la-television?r=8o6915&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></article>
@@ -424,4 +452,27 @@ header .site-icons a.membership-link:active {
  document.getElementById('subscribe-form').addEventListener('submit',event=>{event.preventDefault();if(!email.reportValidity())return;window.location.href='https://lavoirarg.substack.com/subscribe?email='+encodeURIComponent(email.value.trim())});
 })();
 </script>
-<a aria-label="Weather" href="world-weather.html?v=3" title="World Weather" style="position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:1px solid #f2e6d5;border-radius:50%;background:#15153c;color:#f2e6d5;font-size:19px;z-index:9999;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center">☼</a></body></html>
+<a aria-label="Weather" href="world-weather.html?v=3" title="World Weather" style="position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:1px solid #f2e6d5;border-radius:50%;background:#15153c;color:#f2e6d5;font-size:19px;z-index:9999;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center">☼</a>
+<script>
+(function(){
+ const carousel=document.querySelector('#fashion-news .lead-carousel');
+ if(!carousel)return;
+ const slides=[...carousel.querySelectorAll('.lead-slide')];
+ const dots=[...carousel.querySelectorAll('.lead-dot')];
+ let current=0, timer;
+ function show(index){
+   current=(index+slides.length)%slides.length;
+   slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===current);slide.setAttribute('aria-hidden',i===current?'false':'true')});
+   dots.forEach((dot,i)=>dot.classList.toggle('is-active',i===current));
+ }
+ function restart(){clearInterval(timer);timer=setInterval(()=>show(current+1),7000)}
+ carousel.querySelector('.lead-prev').addEventListener('click',()=>{show(current-1);restart()});
+ carousel.querySelector('.lead-next').addEventListener('click',()=>{show(current+1);restart()});
+ dots.forEach((dot,i)=>dot.addEventListener('click',()=>{show(i);restart()}));
+ carousel.addEventListener('mouseenter',()=>clearInterval(timer));
+ carousel.addEventListener('mouseleave',restart);
+ show(0);restart();
+})();
+</script>
+
+</body></html>
