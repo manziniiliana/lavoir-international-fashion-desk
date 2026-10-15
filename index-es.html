@@ -193,12 +193,70 @@ footer{border-top:1px solid rgba(90,16,32,.18)}
  .feature-card:hover .feature-image img{transform:none}
 }
 
+
+/* Reference-inspired masthead, image-led cover and cookie consent */
+:root{--ink:#f7f3ee;--paper:#11111e;--navy:#101022;--muted:#b9b4b0;--rule:rgba(20,20,30,.18)}
+body{background:#f7f3ee;color:#11111e}
+header{padding:18px 3.8vw 0;background:#f7f3ee;color:#11111e;border-bottom:1px solid #ded9d3;position:relative}
+header .top{min-height:130px;align-items:flex-start;padding-top:2px}
+header .top>.brand{top:0;color:#101022;font-size:clamp(42px,6vw,86px);letter-spacing:.17em}
+header .tag{padding-top:94px!important;color:#101022;font-size:10px;letter-spacing:4px}
+header .top>div:last-child{align-self:flex-start}
+header .lang-switch{position:absolute;left:3.8vw;top:28px;margin:0;color:#101022}
+header .lang-switch a{color:#101022}
+header .site-icons{position:absolute;right:3.8vw;top:20px;align-items:center;gap:10px}
+header .site-icons a{border:0;border-radius:0;color:#101022;width:auto;min-width:25px;height:34px;font-size:11px}
+header .site-icons .membership-link{background:#101022;color:#fff;padding:0 20px;letter-spacing:1.5px;font-size:10px;min-width:130px}
+header nav{margin:0 -4.1vw;padding:17px 3.8vw 19px;border-top:1px solid #ded9d3;justify-content:space-between;gap:12px;background:#f7f3ee}
+header nav a{color:#101022;font-size:10px;letter-spacing:1.25px}
+main{max-width:none;padding:0}
+.hero-cover{position:relative;min-height:510px!important;padding:85px 4.2vw 45px!important;display:flex;justify-content:flex-end;align-items:flex-start;border:0!important;background:linear-gradient(90deg,rgba(14,12,12,.82) 0%,rgba(14,12,12,.62) 34%,rgba(14,12,12,.12) 75%),url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=2200&q=90') center 35%/cover no-repeat;color:#fff}
+.hero-copy{max-width:475px;margin-top:auto;color:#fff}
+.hero-cover .kicker{color:#f4eee8;margin-bottom:18px}
+.hero-cover h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,3.4vw,48px);line-height:1.14;letter-spacing:-.025em;color:#fff;max-width:470px}
+.hero-cover .intro{font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.65;color:#f0ece9;margin-top:26px;max-width:440px}
+.hero-rule{width:36px;height:2px;background:#fff;margin-top:28px}
+.hero-read{display:inline-block;margin-top:20px;color:#fff;text-decoration:none;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.8);padding-bottom:6px}
+.featured,main>section:not(.hero){margin-left:auto;margin-right:auto;width:min(1320px,91.5vw)}
+#cookie-banner{position:fixed;z-index:10000;left:0;right:0;bottom:0;background:#f7f3ee;color:#101022;box-shadow:0 -12px 38px rgba(0,0,0,.12);padding:36px 4vw 30px;display:none;grid-template-columns:minmax(0,1.1fr) minmax(430px,1fr);gap:42px;align-items:center}
+#cookie-banner h2{font:400 clamp(28px,3vw,42px)/1.15 Georgia,serif;margin-bottom:18px;color:#101022}
+#cookie-banner p{font-size:16px;line-height:1.65;max-width:690px;color:#333342}
+.cookie-actions{display:flex;gap:16px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.cookie-actions button,.cookie-preferences button{min-height:58px;padding:0 22px;border:1px solid #101022;background:transparent;color:#101022;font:600 14px Arial,sans-serif;cursor:pointer;min-width:145px}
+.cookie-actions .accept,.cookie-preferences .save{background:#101022;color:#fff}
+#cookie-preferences{display:none;position:fixed;z-index:10001;inset:0;background:rgba(9,9,18,.55);align-items:center;justify-content:center;padding:20px}
+.cookie-preferences .panel{width:min(560px,100%);background:#f7f3ee;padding:30px;color:#101022}
+.cookie-preferences h2{font:400 30px Georgia,serif;margin-bottom:14px}
+.cookie-preferences p{font-size:14px;line-height:1.6;margin-bottom:20px}
+.cookie-preferences label{display:flex;gap:12px;align-items:center;padding:14px 0;border-top:1px solid #ddd5cd;font-size:14px}
+.cookie-preferences .pref-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+#cookie-settings-link{position:fixed;z-index:1000;left:16px;bottom:16px;background:#f7f3ee;border:1px solid #101022;color:#101022;padding:9px 12px;font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;display:none}
+@media(max-width:800px){
+ header{padding:15px 18px 0}
+ header .top{min-height:140px}
+ header .top>.brand{font-size:clamp(34px,8vw,50px);letter-spacing:.12em}
+ header .tag{padding-top:65px!important;font-size:8px;letter-spacing:2px}
+ header .lang-switch{left:18px;top:auto;bottom:17px}
+ header .site-icons{right:18px;top:auto;bottom:10px;gap:6px}
+ header .site-icons .membership-link{min-width:auto;padding:0 10px;font-size:9px}
+ header nav{margin:0 -18px;padding:14px 18px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+ header nav a{white-space:nowrap}
+ .hero-cover{min-height:490px!important;padding:45px 22px 35px!important;background-position:58% center}
+ .hero-copy{max-width:390px}
+ .hero-cover h1{font-size:clamp(32px,8vw,43px)}
+ #cookie-banner{grid-template-columns:1fr;gap:20px;padding:25px 22px 22px}
+ #cookie-banner p{font-size:14px}
+ .cookie-actions{justify-content:stretch;gap:8px}
+ .cookie-actions button{flex:1;min-width:0;padding:0 10px;min-height:48px;font-size:12px}
+}
+@media(max-width:480px){header .top{min-height:145px}.hero-cover{min-height:520px!important}.cookie-actions{display:grid;grid-template-columns:1fr 1fr}.cookie-actions .accept{grid-column:1/-1}}
+
 </style>
 </head>
 <body>
-<header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><span>/</span><a href="index-es.html" aria-current="page">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a></div></div></div><nav><a href="#fashion-news">Noticias de moda</a><a href="#fashion-week">Semana de la Moda</a><a href="#houses">Casas</a><a href="#interviews">Entrevistas</a><a href="#culture">Cultura</a><a href="#industry">Industria</a><a href="#press">Prensa</a><a href="#portfolio">Portfolio</a><a href="#about">Sobre L’AVOIR</a></nav></header>
+<header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><span>/</span><a href="index-es.html" aria-current="page">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a class="membership-link" href="#membership">MEMBRESÍA</a></div></div></div><nav><a href="#fashion-news">Noticias de moda</a><a href="#fashion-week">Semana de la Moda</a><a href="#houses">Casas</a><a href="#interviews">Entrevistas</a><a href="#culture">Cultura</a><a href="#industry">Industria</a><a href="#press">Prensa</a><a href="#portfolio">Portfolio</a><a href="#about">Sobre L’AVOIR</a><a href="#policies">Políticas</a></nav></header>
 <main>
-<section class="hero"><div class="kicker">L’AVOIR · PUBLICACIÓN EDITORIAL INDEPENDIENTE</div><h1>INTERNATIONAL<br>FASHION DESK</h1><p class="intro">Moda, cultura e industria del lujo. Una mirada independiente desde Argentina hacia el mundo.</p></section>
+<section class="hero hero-cover"><div class="hero-copy"><div class="kicker">NOTICIAS DE MODA</div><h1>Alexander McQueen: Seán McGirr deja la dirección creativa</h1><div class="hero-rule"></div><p class="intro">La casa británica, propiedad del grupo Kering, inicia una nueva etapa tras la salida del diseñador irlandés, quien había asumido el cargo en 2023.</p><a class="hero-read" href="https://lavoirarg.substack.com/p/alexander-mcqueen-sean-mcgirr-deja?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></section>
 
 <section class="featured" aria-label="Historias destacadas">
 <div class="featured-head"><h2>Historias destacadas</h2><span>La mirada editorial de L’AVOIR</span></div>
@@ -272,4 +330,21 @@ footer{border-top:1px solid rgba(90,16,32,.18)}
 </div>
 </div>
 </section></main><footer><span>© 2026 L’AVOIR</span><span>International Fashion Desk · Argentina</span></footer>
+<div id="cookie-banner" role="dialog" aria-label="Preferencias de privacidad" aria-live="polite"><div><h2>Valoramos tu privacidad</h2><p>Usamos cookies esenciales para que el sitio funcione. Con tu permiso, también podemos guardar preferencias opcionales. No activamos cookies no esenciales sin tu elección.</p></div><div class="cookie-actions"><button type="button" id="cookie-customise">Personalizar</button><button type="button" id="cookie-reject">Rechazar todo</button><button type="button" class="accept" id="cookie-accept">Aceptar todo</button></div></div><div id="cookie-preferences" class="cookie-preferences" role="dialog" aria-modal="true" aria-label="Configuración de cookies"><div class="panel"><h2>Preferencias de cookies</h2><p>Las cookies esenciales siempre están activas porque son necesarias para el funcionamiento básico del sitio. Las preferencias opcionales se mantienen desactivadas hasta que las habilites.</p><label><input type="checkbox" checked disabled> Cookies esenciales (siempre activas)</label><label><input type="checkbox" id="cookie-optional"> Preferencias opcionales</label><div class="pref-actions"><button type="button" id="cookie-save" class="save">Guardar selección</button><button type="button" id="cookie-cancel">Cancelar</button></div></div></div><button type="button" id="cookie-settings-link">Privacidad y cookies</button><script>
+(function(){
+ const banner=document.getElementById('cookie-banner'), modal=document.getElementById('cookie-preferences'), settings=document.getElementById('cookie-settings-link');
+ const read=()=>{try{return JSON.parse(localStorage.getItem('lavoir-cookie-consent')||'null')}catch(e){return null}};
+ const show=()=>{banner.style.display='grid';settings.style.display='none'};
+ const hide=()=>{banner.style.display='none';modal.style.display='none';settings.style.display='block'};
+ const save=(optional)=>{try{localStorage.setItem('lavoir-cookie-consent',JSON.stringify({essential:true,optional:!!optional,updatedAt:new Date().toISOString()}))}catch(e){} hide()};
+ if(!read())show();else settings.style.display='block';
+ document.getElementById('cookie-accept').addEventListener('click',()=>save(true));
+ document.getElementById('cookie-reject').addEventListener('click',()=>save(false));
+ document.getElementById('cookie-customise').addEventListener('click',()=>{modal.style.display='flex';document.getElementById('cookie-optional').checked=!!(read()&&read().optional)});
+ document.getElementById('cookie-save').addEventListener('click',()=>save(document.getElementById('cookie-optional').checked));
+ document.getElementById('cookie-cancel').addEventListener('click',()=>{modal.style.display='none'});
+ settings.addEventListener('click',show);
+ modal.addEventListener('click',e=>{if(e.target===modal)modal.style.display='none'});
+})();
+</script>
 <a aria-label="Weather" href="world-weather.html?v=3" title="World Weather" style="position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:1px solid #f2e6d5;border-radius:50%;background:#15153c;color:#f2e6d5;font-size:19px;z-index:9999;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center">☼</a></body></html>
